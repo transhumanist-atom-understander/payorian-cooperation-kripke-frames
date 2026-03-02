@@ -23,7 +23,7 @@ My fantasy is that when we've figured out this logical decision theory stuff, th
 Like, "if I do this, he'll do that, because he knows I would do the other thing. But if I do that..."
 
 With Löbian cooperation, I got nowhere with this.
-But Critch's post was the first glimmer of the fulfilment of my fantasy.
+But Critch's post was the first glimmer of the fulfillment of my fantasy.
 The only way to communicate to you what I see in it, though, is to walk you through a proof of self-cooperation with Kripke frames.
 
 ## Löbian FairBot
@@ -50,7 +50,7 @@ $$H \leftrightarrow \Box H$$
 
 Such sentences are in fact provable.
 This was established by Löb, in the paper that proved what we now call Löb's theorem ([some history from SEP](https://plato.stanford.edu/entries/goedel-incompleteness/#RefPriLbsThe)).
-It gets more interesting when considering two FairBots with distinct code, which turn out to also cooperate with each other, but but let's move on to another kind of FairBot.
+It gets more interesting when considering two FairBots with distinct code, which turn out to also cooperate with each other, but let's move on to another kind of FairBot.
 
 ## Payorian FairBot
 
