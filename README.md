@@ -14,7 +14,7 @@ The proof involves Löb's theorem, so we call this Löbian cooperation.
 
 [Andrew Critch has suggested another way of proving self-cooperation](https://www.lesswrong.com/posts/2WpPRrqrFQa6n2x3W/modal-fixpoint-cooperation-without-loeb-s-theorem).
 Instead of Löb's theorem, we use what he calls "Payor's lemma".
-It suggests a different way of defining a FairBot, something more like "If, when I hypothetically cooperate with you, then you would cooperate with me, then I really will cooperate."
+It suggests a different way of defining a FairBot, something more like "If, when I hypothetically cooperate with you, you would cooperate with me, then I really will cooperate."
 
 This post is my attempt to explain why I think this approach is more promising, or at least why I like it more.
 
