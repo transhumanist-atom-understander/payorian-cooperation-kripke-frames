@@ -62,6 +62,7 @@ $$F(X) \leftrightarrow \Box (\Box F(X) \rightarrow X(F))$$
 Instead of checking whether the opponent cooperates, we check whether FairBot's provable cooperation implies the opponent cooperates.
 But be careful about "implies"; it's material implication, and doesn't denote real dependence.
 For example, if the opponent unconditionally cooperates, then this implication is trivially true.
+Which, by the way, is another reason I want to call it "FairBot": it "plays fair" instead of exploiting unconditional cooperators.
 
 The Payorian FairBot looks more complicated.
 But reasoning about it is much simpler, at least with Kripke frames.
