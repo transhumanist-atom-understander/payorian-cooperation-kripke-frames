@@ -18,7 +18,7 @@ It suggests a different way of defining a FairBot, something more like "If, when
 
 This post is my attempt to explain why I think this approach is more promising, or at least why I like it more.
 
-When thinking through these kind of self-reflection problems with modal logic, I use Kripke frames, which are directed graphs of possible worlds.
+When thinking through these kinds of self-reflection problems with modal logic, I use Kripke frames, which are directed graphs of possible worlds.
 My fantasy is that when we've figured out this logical decision theory stuff, the reasoning will involve tree-shaped Kripke frames that are intuitively interpretable as something like a game tree.
 Like, "if I do this, he'll do that, because he knows I would do the other thing. But if I do that..."
 
@@ -54,8 +54,8 @@ It gets more interesting when considering two FairBots with distinct code, which
 
 ## Payorian FairBot
 
-Let's say what we were discussing before is a Löbian FairBot, and next, we'll consider a "Payorian FairBot".
-I still want to call it a FairBot, since I think the following does express a kind of fairness:
+Let's call what we were discussing before a "Löbian FairBot", and next, we'll consider a "Payorian FairBot".
+I still want to call it a "FairBot", since I think the following does express a kind of fairness:
 
 $$F(X) \leftrightarrow \Box (\Box F(X) \rightarrow X(F))$$
 
