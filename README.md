@@ -60,7 +60,7 @@ I still want to call it a "FairBot", since I think the following does express a 
 $$F(X) \leftrightarrow \Box (\Box F(X) \rightarrow X(F))$$
 
 Actually, I'd rather drop all these parentheses, and say that $P$ means the FairBot cooperates, and $Q$ means its opponent cooperates.
-If you like, $\P \equiv F(X)$ and $Q \equiv X(F)$.
+If you like, $P \equiv F(X)$ and $Q \equiv X(F)$.
 Then the condition is:
 
 $$P \leftrightarrow \Box (\Box P \rightarrow Q)$$
