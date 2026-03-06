@@ -108,3 +108,6 @@ FairBot's behavior depends upon what it can prove about is opponent, so we will 
 
 $\Box Q$ at $w_0$ implies $Q$ in all downstream worlds, which contradicts with $\lnot Q$ at $w_1$.
 So there cannot be a Kripke model that simultaneously satisfies FairBot's non-cooperation and $\Box Q$, so FairBot must cooperate.
+
+This behavior justifies the name "FairBot".
+It plays fair by cooperating with CooperateBot, rather than playing to win by exploiting it.
