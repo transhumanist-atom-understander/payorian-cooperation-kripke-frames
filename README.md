@@ -59,10 +59,52 @@ I still want to call it a "FairBot", since I think the following does express a 
 
 $$F(X) \leftrightarrow \Box (\Box F(X) \rightarrow X(F))$$
 
+Actually, I'd rather drop all these parentheses, and say that $P$ means the FairBot cooperates, and $Q$ means its opponent cooperates.
+If you like, $\P \equiv F(X)$ and $Q \equiv X(F)$.
+Then the condition is:
+
+$$P \leftrightarrow \Box (\Box P \rightarrow Q)$$
+
 Instead of checking whether the opponent cooperates, we check whether FairBot's provable cooperation implies the opponent cooperates.
 But be careful about "implies"; it's material implication, and doesn't denote real dependence.
-For example, if the opponent unconditionally cooperates, then this implication is trivially true.
-Which, by the way, is another reason I want to call it "FairBot": it "plays fair" instead of exploiting unconditional cooperators.
+For example, if the opponent unconditionally cooperates, then this implication is trivially true—we'll cover this case in more detail later.
 
 The Payorian FairBot looks more complicated.
 But reasoning about it is much simpler, at least with Kripke frames.
+
+## Proving cooperation with Kripke frames, and CooperateBot
+
+Here's how we will prove cooperation, under whatever assumptions.
+We will assume FairBot defects.
+Then, we will write down conditions on a Kripke model for these propositions, in the hopes of finding a contradition, thus proving cooperation.
+
+To assume FairBot defects means to assume
+
+$$\lnot \Box (\Box P \rightarrow Q)$$
+
+Or equivalently,
+
+$$\Diamond (\Box P \land \lnot Q)$$
+
+We'll call the world in which this is true $w_0$, and write what this implies about other possible worlds as so:
+
+$$
+\begin{aligned}
+  &w_0 \\
+  &\downarrow \\
+  &w_1 : \Box P, \lnot Q
+\end{aligned}
+$$
+
+The arrow denotes that world $w_1$ is "accessible" or "visible" from the root world $w_0$.
+That's how we satisfy the proposition that this stuff is possible at the root world: it's true in a visible world.
+
+Don't forget that whatever propositions we're trying to model are true at the root world, even though I won't write them.
+
+Anyway, now we can prove that FairBot cooperates with CooperateBot.
+CooperateBot always cooperates, meaning that $Q$ is true.
+The assumption we will add, therefore, is $\Box Q$, that is, that $Q$ is _provable_.
+FairBot's behavior depends upon what it can prove about is opponent, so we will always wrap the description of the opponent's behavior like this.
+
+$\Box Q$ at $w_0$ implies $Q$ in all downstream worlds, which contradicts with $\lnot Q$ at $w_1$.
+So there cannot be a Kripke model that simultaneously satisfies FairBot's non-cooperation and $\Box Q$, so FairBot must cooperate.
