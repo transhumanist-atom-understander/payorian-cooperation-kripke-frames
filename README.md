@@ -148,6 +148,7 @@ w_1 &\Vdash && \Box P, \lnot Q
 $$
 
 Since we have $\Box Q$ at the root, that implies $Q$ downstream:
+
 $$
 \begin{array}{c@{}c@{}l}
 w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
