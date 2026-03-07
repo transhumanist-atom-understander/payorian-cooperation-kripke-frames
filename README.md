@@ -74,9 +74,8 @@ But reasoning about it is much simpler, at least with Kripke frames.
 
 ## Proving cooperation with Kripke frames, and CooperateBot
 
-Here's how we will prove cooperation, under whatever assumptions.
-We will assume FairBot defects.
-Then, we will write down conditions on a Kripke model for these propositions, in the hopes of finding a contradition, thus proving cooperation.
+Our strategy for proving cooperation is to assume FairBot defects, write down what conditions this puts on a Kripke model, and look for a contradiction.
+A contradiction means no Kripke model can satisfy the premises, so FairBot must cooperate.
 
 To assume FairBot defects means to assume
 
@@ -86,20 +85,19 @@ Or equivalently,
 
 $$\Diamond (\Box P \land \lnot Q)$$
 
-We'll call the world in which this is true $w_0$, and write what this implies about other possible worlds as so:
+A statement of possibility.
+We'll call the world in which this statement is true $w_0$, and write what this implies about other possible worlds as so:
 
 $$
-\begin{aligned}
-  &w_0 \\
-  &\downarrow \\
-  &w_1 : \Box P, \lnot Q
-\end{aligned}
+\begin{array}{c@{}c@{}l}
+  w_0 & \Vdash & \Diamond (\Box P \land \lnot Q)\\
+  \downarrow & & \\
+  w_1 & \Vdash & \Box P, \lnot Q
+\end{array}
 $$
 
 The arrow denotes that world $w_1$ is "accessible" or "visible" from the root world $w_0$.
 That's how we satisfy the proposition that this stuff is possible at the root world: it's true in a visible world.
-
-Don't forget that whatever propositions we're trying to model are true at the root world, even though I won't write them.
 
 Anyway, now we can prove that FairBot cooperates with CooperateBot.
 CooperateBot always cooperates, meaning that $Q$ is true.
@@ -111,3 +109,54 @@ So there cannot be a Kripke model that simultaneously satisfies FairBot's non-co
 
 This behavior justifies the name "FairBot".
 It plays fair by cooperating with CooperateBot, rather than playing to win by exploiting it.
+
+Writing this out more carefully.
+Let's put these propositions at the root.
+First, the behavior of our FairBot:
+
+$$w_0 \Vdash P \leftrightarrow \Box (\Box P \rightarrow Q)$$
+
+Next, the behavior of its opponent CooperateBot, but wrapped as a statement of provability:
+
+$$w_0 \Vdash \Box Q$$
+
+Finally, our assumption that FairBot defects:
+
+$$w_0 \Vdash \lnot P$$
+
+I hope you'll agree that the first statement and the third together are equivalent to what we were putting at the root before.
+
+So to model these statements, we would need a Kripke model where they're all true at the root:
+$$
+\begin{array}{c@{}c@{}l}
+w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
+&  && \Box Q\\
+&  && \lnot P
+\end{array}
+$$
+
+Since this implies the possibility statement from before, we put in the implied visible world:
+
+$$
+\begin{array}{c@{}c@{}l}
+w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
+&  && \Box Q\\
+&  && \lnot P\\
+\downarrow \\
+w_1 &\Vdash && \Box P, \lnot Q
+\end{array}
+$$
+
+Since we have $\Box Q$ at the root, that implies $Q$ downstream:
+$$
+\begin{array}{c@{}c@{}l}
+w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
+&  && \Box Q\\
+&  && \lnot P\\
+\downarrow \\
+w_1 &\Vdash && \Box P, \lnot Q, Q
+\end{array}
+$$
+
+There's our contradiction.
+No Kripke model can satisfy the requirements.
