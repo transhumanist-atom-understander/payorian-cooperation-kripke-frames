@@ -284,14 +284,14 @@ I didn't like having to introduce the auxiliary statement, the Löb sentence $L$
 But with that in place, I could just mechanically place requirements on a Kripke frame until I found a contradiction—in $w_4$.
 
 In [Critch's post](https://www.lesswrong.com/posts/2WpPRrqrFQa6n2x3W/modal-fixpoint-cooperation-without-loeb-s-theorem), he also notes that a Payorian approach avoids the auxiliary sentence.
-He also argues that it is simpler, by counting lines of his proof in a "natural deduction"-type system.
+And he argues that it is simpler, by counting lines of his proof in a "natural deduction"-type system.
 
-The Kripke frame approach suggests a different way of quantifying complexity: how deep in the Kripke frame do you rule out a consistent Kripke model?
-For Payorian cooperation, it is 2, which feels right.
-For Löbian cooperation, it is 4, which feels wrong.
+The Kripke frame approach suggests a different way of quantifying complexity: how deep in the Kripke frame do you have to go, before you rule out a consistent Kripke model?
+For Payorian cooperation, you go two worlds deep, which feels right.
+For Löbian cooperation, you go four worlds, which feels wrong.
 
 I titled this post "Payorian Cooperation is easy with Kripke frames".
-I could have also titled it "Proving cooperation with Kripke frames is easy, once you use Payorian cooperation".
+You could also say that proving cooperation with Kripke frames is easy, once you use Payorian cooperation.
 On a personal level, that's the significance.
 When I first started doing these kinds of proofs a few years ago, I was optimistic about defining a logical decision theory this way, with the Kripke frame structure tracing out the decision algorithm.
 I thought proving FairBot cooperates with itself would be the tutorial level, but it felt more like a final boss.
