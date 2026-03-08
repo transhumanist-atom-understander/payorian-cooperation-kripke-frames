@@ -169,9 +169,9 @@ So to model these statements, we would need a Kripke model where they're all tru
 
 $$
 \begin{array}{c@{}c@{}l}
-w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
-&  && \Box Q\\
-&  && \lnot P
+w_0 &\Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
+&  & \Box Q\\
+&  & \lnot P
 \end{array}
 $$
 
@@ -179,11 +179,11 @@ Since this implies the possibility statement from before, we put in the implied 
 
 $$
 \begin{array}{c@{}c@{}l}
-w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
-&  && \Box Q\\
-&  && \lnot P\\
+w_0 &\Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
+&  & \Box Q\\
+&  & \lnot P\\
 \downarrow \\
-w_1 &\Vdash && \Box P, \lnot Q
+w_1 &\Vdash & \Box P, \lnot Q
 \end{array}
 $$
 
@@ -191,11 +191,11 @@ Since we have $\Box Q$ at the root, that implies $Q$ downstream:
 
 $$
 \begin{array}{c@{}c@{}l}
-w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
-&  && \Box Q\\
-&  && \lnot P\\
+w_0 &\Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
+&  & \Box Q\\
+&  & \lnot P\\
 \downarrow \\
-w_1 &\Vdash && \Box P, \lnot Q, Q
+w_1 &\Vdash & \Box P, \lnot Q, Q
 \end{array}
 $$
 
