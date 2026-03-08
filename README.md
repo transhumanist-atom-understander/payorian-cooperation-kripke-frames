@@ -127,6 +127,7 @@ $$w_0 \Vdash \lnot P$$
 I hope you'll agree that the first statement and the third together are equivalent to what we were putting at the root before.
 
 So to model these statements, we would need a Kripke model where they're all true at the root:
+
 $$
 \begin{array}{c@{}c@{}l}
 w_0 &\Vdash && P \leftrightarrow \Box (\Box P \rightarrow Q)\\
