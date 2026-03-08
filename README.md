@@ -1,5 +1,5 @@
 ---
-title: Payorian Cooperation Explained with Kripke Frames
+title: Payorian Cooperation is easy with Kripke frames
 format: html
 ---
 
@@ -103,8 +103,8 @@ Our strategy for disproving a sentence of provability logic will be to show that
 
 The sentences that we assign to the possible worlds are not just "elementary" sentences of propositional logic, but can include modal sentences (those including $\Diamond$ or $\Box$).
 Modal sentences at one world have implications for what sentences must be true at other worlds.
-A claim of possibility $\Diamond P$ requires that $P$ be true in a visible world; in a tree, $\Diamond P$ at a node requires $P$ at some descendent node (not necessarily a direct child).
-A claim of necessity $\Box P$ requires that $P$ be true in all visible worlds; in a tree, $\Box P$ at a node requires $P$ in all descendents.
+A claim of possibility $\Diamond P$ requires that $P$ be true in a visible world; in a tree, $\Diamond P$ at a node requires $P$ at some descendant node (not necessarily a direct child).
+A claim of necessity $\Box P$ requires that $P$ be true in all visible worlds; in a tree, $\Box P$ at a node requires $P$ in all descendants.
 
 Worlds are not necessarily visible from themselves, because this is provability logic so we can't in general go from $\Box P$ to $P$.
 
@@ -250,3 +250,48 @@ At $w_1$, we "unwrapped" the description of the other FairBot.
 Because we also have $\lnot Q$ at $w_1$, this world now looks like our $w_0'$ from before.
 So at $w_2$, we have everything from our previous $w_1'$.
 But because we had $\Box P$ at $w_1$, we unwrap that at $w_2$, resulting in a contradiction.
+
+## Why this procedure feels right to me
+
+I think of $w_1$ as a world our FairBot is simulating, in which it is betrayed by our opponent.
+It's asking, "if I provably cooperate, what will my opponent do?"
+When the opponent is itself a FairBot, $w_1$ is identical to our root world when we considered FairBot vs CooperateBot, but with $P$ and $Q$ switched.
+
+I imagine $w_2$ as a simulation done by the opponent FairBot.
+We avoid an infinite regress, because we have assumed that in this simulation, the opponent finds that the original FairBot cooperates.
+
+This feels like the right depth to me.
+I imagine you imagining me, and we're done.
+That feels like what I actually do when I'm thinking through Newcomb-like problems.
+In Newcomb's problem, I think about Omega's simulation of me, which I suppose is in $w_2$, if my mental "simulation" of Omega is in $w_1$.
+
+## The sense in which this is simpler than Löbian cooperation
+
+But I feel I haven't really indicated the appeal until I contrast this to the complexity I encountered with Löbian cooperation.
+Before I knew about Payorian cooperation, I tried putting these premises at the root world:
+
+$$
+\begin{gather}
+H \leftrightarrow \Box H\\
+\Box (H \leftrightarrow \Box H)\\
+\Box (L \rightarrow (\Box L \rightarrow H))\\
+\lnot H
+\end{gather}
+$$
+
+I didn't like having to introduce the auxiliary statement, the Löb sentence $L$, since I wanted everything to be automatic.
+But with that in place, I could just mechanically place requirements on a Kripke frame until I found a contradiction—in $w_4$.
+
+In [Critch's post](https://www.lesswrong.com/posts/2WpPRrqrFQa6n2x3W/modal-fixpoint-cooperation-without-loeb-s-theorem), he also notes that a Payorian approach avoids the auxiliary sentence.
+He also argues that it is simpler, by counting lines of his proof in a "natural deduction"-type system.
+
+The Kripke frame approach suggests a different way of quantifying complexity: how deep in the Kripke frame do you rule out a consistent Kripke model?
+For Payorian cooperation, it is 2, which feels right.
+For Löbian cooperation, it is 4, which feels wrong.
+
+I titled this post "Payorian Cooperation is easy with Kripke frames".
+I could have also titled it "Proving cooperation with Kripke frames is easy, once you use Payorian cooperation".
+On a personal level, that's the significance.
+When I first started doing these kinds of proofs a few years ago, I was optimistic about defining a logical decision theory this way, with the Kripke frame structure tracing out the decision algorithm.
+I thought proving FairBot cooperates with itself would be the tutorial level, but it felt more like a final boss.
+Stumbling across Critch's post has restored my confidence in the potential of this approach.
