@@ -201,3 +201,52 @@ $$
 
 There's our contradiction.
 No Kripke model can satisfy the requirements.
+
+## One Payorian FairBot will cooperate with another
+
+Now, let's assume both players are FairBots.
+Before we play them against each other, let's just write down what their non-cooperation implies for a Kripke model, as before.
+Two separate Kripke frames, side by side:
+
+$$
+\begin{array}{c|c}
+\begin{array}{ccl}
+w_0 & \Vdash & P \leftrightarrow \Box(\Box P \rightarrow Q)\\
+    &        & \lnot P\\
+\downarrow & & \\
+w_1 & \Vdash & \Box P,\ \lnot Q
+\end{array}
+&
+\begin{array}{ccl}
+w_0' & \Vdash & Q \leftrightarrow \Box(\Box Q \rightarrow P)\\
+     &        & \lnot Q\\
+\downarrow & & \\
+w_1' & \Vdash & \Box Q,\ \lnot P
+\end{array}
+\end{array}
+$$
+
+Now, considering a FairBot whose opponent is a FairBot.
+It's going to look like grafting the second Kripke frame above onto the first.
+To set it up, as in the previous section, we put three premises at the root world: the behavior of our FairBot, the behavior of its opponent (wrapped in a provability modality), and the assumption that our FairBot defects.
+
+$$
+\begin{array}{c@{}c@{}l}
+w_0        & \Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
+           &        & \Box (Q \leftrightarrow \Box(\Box Q \rightarrow P))\\
+           &        & \lnot P\\
+\downarrow &        & \\
+w_1        & \Vdash & \Box P, \lnot Q\\
+           &        & Q \leftrightarrow \Box(\Box Q \rightarrow P) \\
+\downarrow &        & \\
+w_2        & \Vdash & \Box Q, \lnot P, P
+\end{array}
+$$
+Contradiction at $w_2$.
+That's our proof that a FairBot cooperates with another FairBot.
+
+But let's slow down and look at what happened.
+At $w_1$, we "unwrapped" the description of the other FairBot.
+Because we also have $\lnot Q$ at $w_1$, this world now looks like our $w_0'$ from before.
+So at $w_2$, we have everything from our previous $w_1'$.
+But because we had $\Box P$ at $w_1$, we unwrap that at $w_2$, resulting in a contradiction.
