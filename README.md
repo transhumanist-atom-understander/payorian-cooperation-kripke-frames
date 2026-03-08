@@ -52,6 +52,7 @@ Such sentences are in fact provable.
 This was established by Löb, in the paper that proved what we now call Löb's theorem ([some history from SEP](https://plato.stanford.edu/entries/goedel-incompleteness/#RefPriLbsThe)).
 It gets more interesting when considering two FairBots with distinct code, which turn out to also cooperate with each other, but let's move on to another kind of FairBot.
 
+
 ## Payorian FairBot
 
 Let's call what we were discussing before a "Löbian FairBot", and next, we'll consider a "Payorian FairBot".
@@ -71,6 +72,45 @@ For example, if the opponent unconditionally cooperates, then this implication i
 
 The Payorian FairBot looks more complicated.
 But reasoning about it is much simpler, at least with Kripke frames.
+
+## Kripke frames
+
+In fact, it's easy enough that I think it's a suitable first exercise in using Kripke frames.
+So I hope you'll keep reading even if you've never used them before, and this post can serve as a tutorial.
+To sell them a bit, I think of them as a tree data structure for tracking quotation levels.
+In the prisoner's dilemma tournament, these are base reality, you imagining your opponent, you imagining your opponent imagining you, and so on.
+They end up at different depths of the tree.
+
+The way they come up in the prisoner's dilemma tournament is that we resolve matches using provability logic.
+But instead of writing proofs, we're going to use the semantics.
+If you don't know what I mean by semantics, I hope it helps to say that it's analogous to resolving questions in propositional logic using truth tables.
+The semantics of propositional logic are that a sentence can be satisfied or not by a row in a truth table.
+Or, put another way, a row in a truth table can be a model for a sentence in propositional logic.
+So what does a model for a sentence of modal logic look like?
+(Really we'll be applying this to a collection of sentences, but they can be combined to a single sentence by conjunction).
+
+We'll start with a Kripke frame, which is a set of possible worlds and a relation on that set.
+I had always heard this called an "accessibility" relation, but [the Arbital page](https://www.lesswrong.com/w/kripke-model) calls it a "visibility" relation, so I'll stick with that.
+
+In the special case of provability logic, the visibility relation must be transitive.
+When I draw a Kripke frame like $w_0 \rightarrow w_1 \rightarrow w_2$, I'm not going to draw an arrow from $w_0$ to $w_2$, but $w_2$ is visible from $w_0$.
+So the diagrams will be directed graphs, and visibility is reachability following the arrows.
+The directed graph is I suppose not necessarily a tree, but it's only in the case of a tree that I have some intuition, where a possible world deeper in the tree is more deeply nested in whatever kind of quotation we're considering.
+
+A Kripke model is a Kripke frame, plus an assignment of which sentences are true at each possible world.
+Our strategy for disproving a sentence of provability logic will be to show that it cannot be satisfied by any Kripke model.
+(And to prove a sentence, we'll disprove the negation.)
+
+The sentences that we assign to the possible worlds are not just "elementary" sentences of propositional logic, but can include modal sentences (those including $\Diamond$ or $\Box$).
+Modal sentences at one world have implications for what sentences must be true at other worlds, which is going to be critical when we need to rule out the possibility of a Kripke model by demonstrating an inconsistency.
+A claim of possibility $\Diamond P$ requires that $P$ be true in a visible world; in a tree, $\Diamond P$ at a node requires $P$ at some descendent node (not necessarily a direct child).
+A claim of necessity $\Box P$ requires that $P$ be true in all visible worlds; in a tree, $\Box P$ at a node requires $P$ in all descendents.
+
+Worlds are not necessarily visible from themselves, because this is provability logic so we can't in general go from $\Box P$ to $P$.
+
+Well, that's not the best beginner's guide to Kripke frames.
+If you want a more complete explanation, check out [the Arbital page](https://www.lesswrong.com/w/kripke-model) or [the SEP](https://plato.stanford.edu/entries/logic-modal/#PosWorSem).
+But at least I've repeated the facts that I'm going to actually use, so let's move on to applying these ideas to the Payorian FairBot.
 
 ## Proving cooperation with Kripke frames, and CooperateBot
 
@@ -96,8 +136,7 @@ $$
 \end{array}
 $$
 
-The arrow denotes that world $w_1$ is "accessible" or "visible" from the root world $w_0$.
-That's how we satisfy the proposition that this stuff is possible at the root world: it's true in a visible world.
+We satisfied the proposition that this stuff is possible at the root world by making it true in a visible world.
 
 Anyway, now we can prove that FairBot cooperates with CooperateBot.
 CooperateBot always cooperates, meaning that $Q$ is true.
