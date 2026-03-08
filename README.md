@@ -242,6 +242,7 @@ w_1        & \Vdash & \Box P, \lnot Q\\
 w_2        & \Vdash & \Box Q, \lnot P, P
 \end{array}
 $$
+
 Contradiction at $w_2$.
 That's our proof that a FairBot cooperates with another FairBot.
 
