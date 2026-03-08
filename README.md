@@ -129,7 +129,7 @@ A statement of possibility.
 We'll call the world in which this statement is true $w_0$, and write what this implies about other possible worlds as so:
 
 $$
-\begin{array}{c@{}c@{}l}
+\begin{array}{ccl}
   w_0 & \Vdash & \Diamond (\Box P \land \lnot Q)\\
   \downarrow & & \\
   w_1 & \Vdash & \Box P, \lnot Q
@@ -168,7 +168,7 @@ I hope you'll agree that the first statement and the third together are equivale
 So to model these statements, we would need a Kripke model where they're all true at the root:
 
 $$
-\begin{array}{c@{}c@{}l}
+\begin{array}{ccl}
 w_0 &\Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
 &  & \Box Q\\
 &  & \lnot P
@@ -178,7 +178,7 @@ $$
 Since this implies the possibility statement from before, we put in the implied visible world:
 
 $$
-\begin{array}{c@{}c@{}l}
+\begin{array}{ccl}
 w_0 &\Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
 &  & \Box Q\\
 &  & \lnot P\\
@@ -190,7 +190,7 @@ $$
 Since we have $\Box Q$ at the root, that implies $Q$ downstream:
 
 $$
-\begin{array}{c@{}c@{}l}
+\begin{array}{ccl}
 w_0 &\Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
 &  & \Box Q\\
 &  & \lnot P\\
@@ -231,7 +231,7 @@ It's going to look like grafting the second Kripke frame above onto the first.
 To set it up, as in the previous section, we put three premises at the root world: the behavior of our FairBot, the behavior of its opponent (wrapped in a provability modality), and the assumption that our FairBot defects.
 
 $$
-\begin{array}{c@{}c@{}l}
+\begin{array}{ccl}
 w_0        & \Vdash & P \leftrightarrow \Box (\Box P \rightarrow Q)\\
            &        & \Box (Q \leftrightarrow \Box(\Box Q \rightarrow P))\\
            &        & \lnot P\\
