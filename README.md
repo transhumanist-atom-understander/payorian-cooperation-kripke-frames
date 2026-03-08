@@ -30,7 +30,7 @@ The only way to communicate to you what I see in it, though, is to walk you thro
 
 First, reviewing the Löbian FairBot and Löbian cooperation, without Kripke frames.
 
-We consider these programs as functions that take in another function, and output "True" if they cooperate.
+We consider a program that takes another program as input, and outputs True to cooperate with it or False to defect.
 So, $A(B)$ means that $A$ cooperates when the opponent is $B$.
 
 For FairBot, we have
@@ -102,7 +102,7 @@ Our strategy for disproving a sentence of provability logic will be to show that
 (And to prove a sentence, we'll disprove the negation.)
 
 The sentences that we assign to the possible worlds are not just "elementary" sentences of propositional logic, but can include modal sentences (those including $\Diamond$ or $\Box$).
-Modal sentences at one world have implications for what sentences must be true at other worlds, which is going to be critical when we need to rule out the possibility of a Kripke model by demonstrating an inconsistency.
+Modal sentences at one world have implications for what sentences must be true at other worlds.
 A claim of possibility $\Diamond P$ requires that $P$ be true in a visible world; in a tree, $\Diamond P$ at a node requires $P$ at some descendent node (not necessarily a direct child).
 A claim of necessity $\Box P$ requires that $P$ be true in all visible worlds; in a tree, $\Box P$ at a node requires $P$ in all descendents.
 
