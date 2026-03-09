@@ -141,7 +141,7 @@ We satisfied the proposition that this stuff is possible at the root world by ma
 Anyway, now we can prove that FairBot cooperates with CooperateBot.
 CooperateBot always cooperates, meaning that $Q$ is true.
 The assumption we will add, therefore, is $\Box Q$, that is, that $Q$ is _provable_.
-FairBot's behavior depends upon what it can prove about is opponent, so we will always wrap the description of the opponent's behavior like this.
+FairBot's behavior depends upon what it can prove about its opponent, so we will always wrap the description of the opponent's behavior like this.
 
 $\Box Q$ at $w_0$ implies $Q$ in all downstream worlds, which contradicts with $\lnot Q$ at $w_1$.
 So there cannot be a Kripke model that simultaneously satisfies FairBot's non-cooperation and $\Box Q$, so FairBot must cooperate.
