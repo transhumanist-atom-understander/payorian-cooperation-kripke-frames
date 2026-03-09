@@ -19,7 +19,7 @@ It suggests a different way of defining a FairBot, something more like "If, when
 This post is my attempt to explain why I think this approach is more promising, or at least why I like it more.
 
 When thinking through these kinds of reflection problems with modal logic, I use Kripke frames, which are directed graphs of possible worlds.
-My fantasy is that when we've figured out this logical decision theory stuff, the reasoning will involve tree-shaped Kripke frames that are intuitively interpretable as something like a game tree.
+My fantasy is that when we've figured out this logical decision theory stuff, the reasoning will involve Kripke frames that are intuitively interpretable as something like a game tree, or paths through a game tree.
 Like, "if I do this, he'll do that, because he knows I would do the other thing. But if I do that..."
 
 With Löbian cooperation, I got nowhere with this.
@@ -294,6 +294,6 @@ For Löbian cooperation, you go four worlds deep, which feels wrong.
 I titled this post "Payorian cooperation is easy with Kripke frames".
 You could also say that proving cooperation with Kripke frames is easy, once you use Payorian cooperation.
 On a personal level, that's the significance.
-When I first started doing these kinds of proofs a few years ago, I was optimistic about defining a logical decision theory this way, with the Kripke frame structure tracing out the decision algorithm.
+When I first started doing these kinds of proofs a few years ago, I was optimistic about doing logical decision theory this way.
 I thought proving FairBot cooperates with itself would be the tutorial level, but with a Löbian FairBot, it felt more like a final boss.
 Stumbling across Critch's post has restored my confidence in the potential of this approach.
