@@ -256,10 +256,10 @@ But because we had $\Box P$ at $w_1$, we unwrap that at $w_2$, resulting in a co
 
 I think of $w_1$ as a world our FairBot is simulating, in which it is betrayed by our opponent.
 It's asking, "if I provably cooperate, what will my opponent do?"
-When the opponent is itself a FairBot, $w_1$ is identical to our root world when we considered FairBot vs CooperateBot, but with $P$ and $Q$ switched.
+When the opponent is itself a FairBot, $w_1$ is familiar: it looks just like [when we considered FairBot vs CooperateBot](https://www.lesswrong.com/posts/LaCP6WyNzX8kiZn3w/payorian-cooperation-is-easy-with-kripke-frames#Proving_cooperation_with_Kripke_frames__and_CooperateBot), but with $P$ and $Q$ switched.
 
-I imagine $w_2$ as a simulation done by the opponent FairBot.
-We avoid an infinite regress, because we have assumed that in this simulation, the opponent finds that the original FairBot cooperates.
+I imagine $w_2$ as a simulation done by the simulated opponent FairBot.
+We avoid an infinite regress, because we have assumed that in this simulation, the simulated opponent finds that the first FairBot cooperates.
 
 This feels like the right depth to me.
 I imagine you imagining me, and we're done.
@@ -280,15 +280,16 @@ H \leftrightarrow \Box H\\
 \end{gather}
 $$
 
-I didn't like having to introduce the auxiliary statement, the Löb sentence $L$, since I wanted everything to be automatic.
-But with that in place, I could just mechanically place requirements on a Kripke frame until I found a contradiction—in $w_4$.
+I didn't like having to introduce the Löb sentence $L$.
+I felt like I was putting it in by hand, and I wanted everything to be automatic.
+But with these premises, I could just mechanically hang requirements on a Kripke frame until I found a contradiction—in $w_4$.
 
 In [Critch's post](https://www.lesswrong.com/posts/2WpPRrqrFQa6n2x3W/modal-fixpoint-cooperation-without-loeb-s-theorem), he also notes that a Payorian approach avoids the auxiliary sentence.
 And he argues that it is simpler, by counting lines of his proof in a "natural deduction"-type system.
 
 The Kripke frame approach suggests a different way of quantifying complexity: how deep in the Kripke frame do you have to go, before you rule out a consistent Kripke model?
 For Payorian cooperation, you go two worlds deep, which feels right.
-For Löbian cooperation, you go four worlds, which feels wrong.
+For Löbian cooperation, you go four worlds deep, which feels wrong.
 
 I titled this post "Payorian Cooperation is easy with Kripke frames".
 You could also say that proving cooperation with Kripke frames is easy, once you use Payorian cooperation.
