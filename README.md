@@ -254,7 +254,7 @@ But because we had $\Box P$ at $w_1$, we unwrap that at $w_2$, resulting in a co
 
 ## Why this procedure feels right to me
 
-I think of $w_1$ as a world our FairBot is simulating, in which it is betrayed by our opponent.
+I think of $w_1$ as a world our FairBot is simulating.
 It's asking, "if I provably cooperate, what will my opponent do?"
 When the opponent is itself a FairBot, $w_1$ is familiar: it looks just like [when we considered FairBot vs CooperateBot](https://www.lesswrong.com/posts/LaCP6WyNzX8kiZn3w/payorian-cooperation-is-easy-with-kripke-frames#Proving_cooperation_with_Kripke_frames__and_CooperateBot), but with $P$ and $Q$ switched.
 
