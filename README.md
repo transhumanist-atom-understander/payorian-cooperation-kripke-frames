@@ -291,7 +291,7 @@ The Kripke frame approach suggests a different way of quantifying complexity: ho
 For Payorian cooperation, you go two worlds deep, which feels right.
 For Löbian cooperation, you go four worlds deep, which feels wrong.
 
-I titled this post "Payorian Cooperation is easy with Kripke frames".
+I titled this post "Payorian cooperation is easy with Kripke frames".
 You could also say that proving cooperation with Kripke frames is easy, once you use Payorian cooperation.
 On a personal level, that's the significance.
 When I first started doing these kinds of proofs a few years ago, I was optimistic about defining a logical decision theory this way, with the Kripke frame structure tracing out the decision algorithm.
