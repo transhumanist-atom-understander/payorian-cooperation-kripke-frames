@@ -275,7 +275,7 @@ $$
 \begin{gather}
 H \leftrightarrow \Box H\\
 \Box (H \leftrightarrow \Box H)\\
-\Box (L \rightarrow (\Box L \rightarrow H))\\
+\Box (L \leftrightarrow (\Box L \rightarrow H))\\
 \lnot H
 \end{gather}
 $$
