@@ -1,5 +1,5 @@
 ---
-title: Payorian Cooperation is easy with Kripke frames
+title: Payorian cooperation is easy with Kripke frames
 format: html
 ---
 
